@@ -1,0 +1,12 @@
+<p>update-form works!</p>
+
+<form #updateForm="ngForm" (ngSubmit)="update(updateForm.value)">
+    <h4>Update User..</h4>
+    First Name: <input type="text" [ngModel]="firstName"><br><br>
+    Last Name: <input type="text" [ngModel]="lastName"><br><br>
+    Age: <input type="number" [ngModel]="age"><br><br>
+    Nationality: <input type="text" [ngModel]="nationality"><br><br>
+    Gender: <input type="text" [ngModel]="gender"><br><br>
+    <button type="button">Cancel</button>
+    <button type="submit">Save</button>
+</form>

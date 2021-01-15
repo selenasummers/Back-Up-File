@@ -1,0 +1,8 @@
+<!-- <p>template-driven-form works!</p> -->
+
+
+<form #templateForm="ngForm" (ngSubmit)="test(templateForm.value)">
+    Username: <input [ngModel]="username" name="username" type="text">
+    Password: <input [ngModel]="password" name="password" type="password">
+    <button type="submit">Submit</button>
+</form>

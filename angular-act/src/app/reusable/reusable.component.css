@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}
+
+#overview{
+    background-color: lightpink;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#infos{
+    margin: 10px;
+}
+

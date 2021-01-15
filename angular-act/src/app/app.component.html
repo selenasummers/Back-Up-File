@@ -1,0 +1,88 @@
+<!-- <h1>Hi {{title}}</h1>  -->
+<!-- <app-first-sample></app-first-sample> 
+<app-second-sample></app-second-sample> -->
+
+<!-- <button [disabled] = "isActive" (click)="sayHi()">Button</button> -->
+<!-- 
+<input type = "text" [(ngModel)]="name">
+<h4>{{name}}</h4> -->
+<!-- 
+<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZV6GG41YL4uDagOc-Wn5gOBETqiZ0SaIM2g&usqp=CAU"/>
+<br>
+<input type = "text" [(ngModel)]="name">
+<button (click)="check()">Submit</button>
+<button [disabled]="name === ''" (click)="reset()">Reset</button>
+
+<h3>{{default}}</h3> -->
+
+
+<!-- // BUILDING REUSABLE COMPONENTS
+// Input Properties -->
+<!-- 
+<h1>{{title}}</h1>
+<h3>Full Name: {{fullName}}</h3>
+<app-sample
+    [firstNameS]="firstNameA"
+    [lastNameS]="lastNameA"
+    (fullName)="getFullName($event)"
+></app-sample>
+<br><br> -->
+
+
+
+<!-- ACTIVITY -->
+<!-- <h1>{{title}}</h1>
+First Name: <input type="text" [(ngModel)]="firstNameA"><br><br>
+Last Name: <input type="text" [(ngModel)]="lastNameA"><br><br>
+Age: <input type="text" [(ngModel)]="Age">
+
+<app-sample 
+    [firstNameS] = "firstNameA"
+    [lastNameS] = "lastNameA"
+    [ageS] = "Age"
+    (fullName) = "getFullName($event)"
+    (currentAge) = "getCurrentAge($event)"
+></app-sample>
+
+<h3>Full Name: {{fullNameA}}</h3>
+<h3>Age: {{currentAge}}</h3> -->
+
+
+<!-- DIRECTIVES -->
+
+<h1>{{title}}</h1>
+<!-- <div *ngIf="names.length > 2">
+<div *ngFor="let name of names">
+    <app-reusable [name]="name"></app-reusable>
+</div>
+</div>
+
+<input type="text" [(ngModel)]="name">
+<button (click)="addName()">Add Name</button> -->
+
+
+<div *ngFor="let person of persons">
+    <app-reusable [person]="person" (personInfo)="delete($event)" ></app-reusable>
+</div>
+<br>
+<form [formGroup]="userProfile" (ngSubmit)="addUser(userProfile.value)">
+    <h4>Add User..</h4>
+    First Name: <input type="text" formControlName="firstName"><br><br>
+    Last Name: <input type="text" formControlName="lastName"><br><br>
+    Age: <input type="number" formControlName="age"><br><br>
+    Nationality: <input type="text" formControlName="nationality"><br><br>
+    Gender: <input type="text" formControlName="gender"><br><br>
+    <button type="submit">Add</button>
+    <!-- <button type="submit" (click)="updateUser()">Update</button> -->
+</form>
+<app-update-form></app-update-form>
+
+
+<!-- REACTIVE FORM -->
+<!-- <br><br>
+<app-reactive-form></app-reactive-form>
+
+<br><br><br> -->
+
+<!-- TEMPLATE DRIVEN FORM -->
+<!-- <app-template-driven-form></app-template-driven-form> -->

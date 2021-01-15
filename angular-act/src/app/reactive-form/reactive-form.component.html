@@ -1,0 +1,30 @@
+<!-- <p>reactive-form works!</p> -->
+
+
+<!-- REACTIVE FORM -->
+<!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    First Name: <input type="text" formControlName="firstName" required><br><br>
+    Last Name: <input type="text" formControlName="lastName" required><br><br>
+    Age: <input type="number" formControlName="age"><br><br>
+    Gender: <input type="text" formControlName="gender"><br><br>
+    <button type="submit">Submit</button>
+</form> -->
+
+<form [formGroup]="userForm" (ngSubmit)="test(userForm)">
+    <div>
+        First Name: <input formControlName="firstName" type="text"><br><br>
+        Last Name: <input formControlName="lastName" type="text"><br><br>
+        Age: <input formControlName="age" type="number"><br><br>
+    </div>
+    <div formGroupName="address">
+        Barangay: <input formControlName="barangay" type="text"><br><br>
+        Municipality: <input formControlName="municipality" type="text"><br><br>
+    </div>
+
+    <button type="submit">Add User</button>
+</form>
+
+
+
+
+
